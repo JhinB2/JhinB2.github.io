@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    background-color: rgb(26, 26, 26);
+}
+
+h1{
+    width: 100vw;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 400%;
+    font-family: 'Fredoka One', cursive;
+    color:rgb(79, 41, 110);
+}
+
+main{
+    display: flex;
+    position: relative;
+    text-align: justify;
+    width: 70vw;
+    margin: 5% auto;
+    justify-content: space-between;
+}
+
+#text{
+    display: block;
+    position: relative;
+    color:rgb(97, 50, 136);
+    font-family: 'Fredoka One', cursive;
+    width: 25%;
+}
+
+#text2{
+    color:rgb(97, 50, 136);
+    font-family: 'Fredoka One', cursive;
+}
+
+#txt{
+    filter: blur(3px);
+}
