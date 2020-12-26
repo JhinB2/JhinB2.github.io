@@ -21,9 +21,19 @@
             function display() {
                 var close = document.getElementById("close").style.display="block"
             }
+
+            function seeForm(){
+                if (document.getElementById("form").style.visibility === "visible"){
+                    document.getElementById("form").style.visibility = "hidden"
+                } else{
+                    document.getElementById("form").style.visibility = "visible"
+                }
+            }
         </script>
     </head>
     <body>
+        <img src="FTBAcrilik/svgs/question.svg" alt="Help" class="help" id="helpSVG">
+        <div class="help" id="helpText">The big title is the server IP which you can directly paste into your minecraft. For more info contact our admins on the bottom of the page.</div>
         <div id="wrapper">
             <div id="title">
                 <div id="close" onclick="closeDialog()">CLOSE</div>
@@ -46,6 +56,15 @@
         <footer>
             <a class="svg" href="https://www.youtube.com/watch?v=EKN9cYxbHXQ&ab_channel=ChosenArchitect"><img src="FTBAcrilik/svgs/youtube.svg" alt="youtube" class="svg"></a>
             <a class="svg" href="https://www.twitch.tv/ftb"><img src="FTBAcrilik/svgs/twitch.svg" alt="twitch" class="svg"></a>
+            <a class="svg" onclick="seeForm()"><img src="FTBAcrilik/imgs/gmail.png" alt="mail" id="maili"></a>
         </footer>
+        <form action="mailto:moracasado@gmail.com" method="post" enctype="text/plain" id="form">
+            <div><img src="FTBAcrilik/svgs/close.svg" alt="CLOSE" id="closeForm" onclick="seeForm()"></div>
+            Name:<br>
+            <input type="text" name="name"><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br>
+            <input type="submit" value="Send">
+            </form>
     </body>
 </html>

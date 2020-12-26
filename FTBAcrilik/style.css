@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 *{
     margin: 0;
@@ -52,7 +53,7 @@ h1:hover{
     position: relative;
     width: 75vw;
     height: auto;
-    margin: 15% auto;
+    margin: 5% auto;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-row-gap: 25px;
@@ -62,10 +63,37 @@ article{
     display: block;
     position: relative;
     height: auto;
-    width: 70%;
-    margin: 0 auto;
+    width: 75%;
+    margin: 10% auto;
     min-height: 200px;
     border-radius: 5px;
+}
+
+.help{
+  display: block;
+  position: fixed;
+  width: 2.5%;
+  height: auto;
+  top: 5%;
+  left: 15%;
+  z-index: 500;
+}
+
+.help:hover ~ #helpText{
+  visibility: visible;
+}
+
+#helpText{
+  visibility: hidden;
+  padding: 1% 2%;
+  margin: 2.5% 2.5%;
+  font-size: 16px;
+  font-family: 'Fredoka One', cursive;
+  border-radius: 10px;
+  text-align: justify;
+  background-color: rgb(197, 197, 197, 0.6);
+  width: auto;
+  max-width: 20%;
 }
 
 .mains{
@@ -141,6 +169,60 @@ footer{
     cursor: pointer;
 }
 
+img{
+  transition: all linear 0.1s;
+}
+
+img:hover{
+  transform: scale(1.2);
+}
+
+#form{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
+  color: rgb(27, 95, 173);
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+}
+
+input[type=submit]{
+  padding: 8px 14px;
+  margin: 8px 0;
+  border: none;
+  outline: none;
+}
+
+input[type=submit]:hover{
+  background-color: rgb(204, 204, 204);
+}
+
+#maili{
+  transform: scale(0.8);
+}
+
+#closeForm{
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: auto;
+}
+
+
+/* R A I N B O W     T I T L E */
+
 .rainbow {
   
     /* Font options */
@@ -200,6 +282,8 @@ footer{
   90%{color: DodgerBlue;}
     100%{color: orange;}
 }
+
+
 /* V E R Y    L A R G E   S C R E E N S*/
 
 @media screen and (min-width: 1700px) {
@@ -210,6 +294,11 @@ footer{
   .svg{
     max-width: 18%;
     max-height: 18%;
+  }
+
+  #helpText{
+    font-size: 26px;
+    max-width: 23%;
   }
 
 }
@@ -244,6 +333,24 @@ footer{
   #title{
     font-size: 40px;
   }
+
+  #helpSVG{
+    width: 3.5%;
+  }
+
+  .help{
+    left: 4%;
+  }
+
+  #helpText{
+    max-width: 30%;
+    top: 6%;
+    left: 6%;
+  }
+
+  #maili{
+    transform: scale(0.8);
+  }
 }
 
 /* P H O N E S     A N D    S M A L L   D E V I C E S*/
@@ -257,6 +364,21 @@ footer{
     display: flex;
     flex-direction: column;
   }
+
+  #helpSVG{
+    width: 6%;
+  }
+
+  #helpText{
+    font-size: 14px;
+    max-width: 40%;
+    top: 8%;
+    left: 7%;
+  }
+
+  #maili{
+    transform: scale(0.6);
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -265,5 +387,20 @@ footer{
   }
   #didi{
     font-size: 40px;
+  }
+
+  #helpSVG{
+    width: 7%;
+  }
+
+  #helpText{
+    font-size: 12px;
+    max-width: 50%;
+    top: 8%;
+    left: 7%;
+  }
+
+  #maili{
+    transform: scale(0.4);
   }
 }
