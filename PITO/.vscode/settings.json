@@ -1,4 +1,7 @@
 {
     "oneDarkPro.vivid": true,
-    "python.pythonPath": "C:\\Users\\dirkb\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+    "python.pythonPath": "C:\\Users\\dirkb\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=pygame"  // The extension is "lxml" not "1xml"
+    ]
 }
