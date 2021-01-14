@@ -1,5 +1,5 @@
 import ctypes, sys, pygame
-import keyboard
+from PIL import Image
 user32 = ctypes.windll.user32
 
 width = user32.GetSystemMetrics(0)
@@ -11,7 +11,6 @@ speed = [1, 1]
 black = 0, 0, 0
 
 screen = pygame.display.set_mode(size)
-
 ball = pygame.image.load("Projects/pgame/Resources/d2.png")
 ballrect = ball.get_rect()
 
@@ -28,5 +27,10 @@ while 1:
     screen.fill(black)
     screen.blit(ball, ballrect)
     pygame.display.flip()
-    if keyboard.is_pressed("Esc"):
-        break
+
+    # END THE GAME IF WE PRESS ESC
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_ESCAPE:
+            break
+
+
