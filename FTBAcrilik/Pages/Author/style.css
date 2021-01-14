@@ -43,5 +43,5 @@ main{
 }
 
 #txt{
-    filter: blur(3px);
+    visibility: hidden;
 }

@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Oh hi Mark</title>
     <script>
-        function show() {
-
-            document.getElementById("txt").style.webkitFilter === "blur(0)"
+        function show(){
+            if (document.getElementById("txt").style.visibility === "visible"){
+                document.getElementById("txt").style.visibility = "hidden"
+            } else{
+                document.getElementById("txt").style.visibility = "visible"
+            }
         }
     </script>
 </head>
